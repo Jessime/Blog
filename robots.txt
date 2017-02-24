@@ -1,0 +1,4 @@
+Sitemap: https://what-is-bioinformatics.com/sitemapindex.xml
+
+User-Agent: *
+Host: what-is-bioinformatics.com
