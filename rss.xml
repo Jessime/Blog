@@ -1,2 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computers + Biology</title><link>https://what-is-bioinformatics.com/</link><description>A collections of things I've learned in graduate school.</description><atom:link type="application/rss+xml" rel="self" href="https://what-is-bioinformatics.com/rss.xml"></atom:link><language>en</language><lastBuildDate>Fri, 24 Feb 2017 04:47:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs></channel></rss>
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Computers + Biology</title><link>https://what-is-bioinformatics.com/</link><description>A collections of things I've learned in graduate school.</description><atom:link href="https://what-is-bioinformatics.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Fri, 24 Feb 2017 22:15:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Getting Started with Nikola</title><link>https://what-is-bioinformatics.com/posts/getting-started-with-nikola/</link><dc:creator>Jessime Kirk</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="How-to-Make-Your-First-Blog-Post-with-Nikola"&gt;How to Make Your First Blog Post with Nikola&lt;a class="anchor-link" href="https://what-is-bioinformatics.com/posts/getting-started-with-nikola/#How-to-Make-Your-First-Blog-Post-with-Nikola"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I decided I wanted to revamp my blog. I was previously running with &lt;a href="https://www.blogger.com/"&gt;blogger&lt;/a&gt;, but as my posts became more technical, it basically devolved to linking to a Github Gist holding a jupyter notebook. So my biggest requirement was that my new site generator had to have great support for notebooks. My next biggest requirement was that I wanted to be able to have comments on the blog, which should hopefully foster discussion. Finally, I wanted something that won't get in my way as I'm writing. Content is significantly more important than spending time tinkering with blog settings. It seems like &lt;a href="https://getnikola.com/"&gt;Nikola&lt;/a&gt; fits the bill pretty well. Since this is my first go around, I'll begin by following their '&lt;a href="https://getnikola.com/getting-started.html"&gt;Getting Started&lt;/a&gt;' guide.&lt;/p&gt;
+&lt;p&gt;Here's how I set everything up.&lt;/p&gt;
+&lt;h3 id="Installation"&gt;Installation&lt;a class="anchor-link" href="https://what-is-bioinformatics.com/posts/getting-started-with-nikola/#Installation"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As suggested, I created a virtual environment before installing Nikola.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;conda create -n blog &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3.5 anaconda
+&lt;span class="nb"&gt;source&lt;/span&gt; activate blog
+pip install Nikola&lt;span class="o"&gt;[&lt;/span&gt;extras&lt;span class="o"&gt;]&lt;/span&gt;
+nikola init blog
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Initializing a blog takes you through a series of steps:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Creating Nikola Site
+====================
+
+This is Nikola v7.8.3.  We will now ask you a few easy questions about your new site.
+If you do not want to answer and want to go with the defaults instead, simply restart with the `-q` parameter.
+--- Questions about the site ---
+Site title [My Nikola Site]: Computers + Biology
+Site author [Nikola Tesla]: Jessime Kirk
+Site author's e-mail [n.tesla@example.com]: jessime@gmail.com
+Site description [This is a demo site for Nikola.]: A collections of things I've learned in graduate school.
+Site URL [https://example.com/]: https://what-is-bioinformatics.com/
+Enable pretty URLs (/page/ instead of /page.html) that don't need web server configuration? [Y/n] y
+--- Questions about languages and locales ---
+We will now ask you to provide the list of languages you want to use.
+Please list all the desired languages, comma-separated, using ISO 639-1 codes.  The first language will be used as the default.
+Type '?' (a question mark, sans quotes) to list available languages.
+Language(s) to use [en]: 
+
+Please choose the correct time zone for your blog. Nikola uses the tz database.
+You can find your time zone here:
+https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+Time zone [America/New_York]: 
+    Current time in America/New_York: 16:56:10
+Use this time zone? [Y/n] 
+--- Questions about comments ---
+You can configure comments now.  Type '?' (a question mark, sans quotes) to list available comment systems.  If you do not want any comments, just leave the field blank.
+Comment system: ?
+
+# Available comment systems:
+#   disqus, facebook, googleplus, intensedebate, isso, livefyre, muut
+
+Comment system: disqus
+You need to provide the site identifier for your comment system.  Consult the Nikola manual for details on what the value should be.  (you can leave it empty and come back later)
+Comment system site identifier: what-is-bioinformatics
+
+That's it, Nikola is now configured.  Make sure to edit conf.py to your liking.
+If you are looking for themes and addons, check out https://themes.getnikola.com/ and https://plugins.getnikola.com/.
+Have fun!
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="Disqus"&gt;Disqus&lt;a class="anchor-link" href="https://what-is-bioinformatics.com/posts/getting-started-with-nikola/#Disqus"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the middle of this, I had to setup a &lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt; account, which was super easy.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Sign up (I did it with my Google account.&lt;/li&gt;
+&lt;li&gt;Select "I want to install Disqus on my site"&lt;/li&gt;
+&lt;li&gt;Create a new site&lt;ol&gt;
+&lt;li&gt;Website Name : Computers + Biology&lt;/li&gt;
+&lt;li&gt;Shortname : what-is-bioinformatics&lt;/li&gt;
+&lt;li&gt;Category : Tech&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="Deploying-to-Github"&gt;Deploying to Github&lt;a class="anchor-link" href="https://what-is-bioinformatics.com/posts/getting-started-with-nikola/#Deploying-to-Github"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;I decided to deploy first, and work on integrating a post later. Before deploying, I had to make a git repository. Github's short &lt;a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/"&gt;walkthrough&lt;/a&gt; is very straightforward.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git init .
+git remote add origin git@github.com:Jessime/computers_biology.git
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add the &lt;code&gt;.gitignore&lt;/code&gt; file suggested by the Getting Started guide, and make sure your &lt;code&gt;conf.py&lt;/code&gt; file settings are correct. Specifically:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;GITHUB_SOURCE_BRANCH = 'master'
+GITHUB_DEPLOY_BRANCH = 'gh-pages'
+GITHUB_REMOTE_NAME = 'origin'
+GITHUB_COMMIT_SOURCE = True
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I ran &lt;code&gt;nikola github_deploy&lt;/code&gt; at this point, just to verify things were working. It should take care of everything from creating the master branch if necessary to pushing changes to gh-pages.&lt;/p&gt;
+&lt;h3 id="Adding-a-Post"&gt;Adding a Post&lt;a class="anchor-link" href="https://what-is-bioinformatics.com/posts/getting-started-with-nikola/#Adding-a-Post"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Now I need some actual content. Again, my goal here is having a way to publish Notebooks in the future, so I needed make sure I could get that working. Still following the Getting Start guide, I followed the section on &lt;a href="https://getnikola.com/handbook.html#id38"&gt;Configuring other input formats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I had to make two more changes in &lt;code&gt;conf.py&lt;/code&gt; to the &lt;code&gt;POSTS&lt;/code&gt; and &lt;code&gt;PAGES&lt;/code&gt; variables. They should look like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.ipynb"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pages/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"pages"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pages/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"pages"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pages/*.html"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"pages"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pages/*.ipynb"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"pages"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then I started a new post by running &lt;code&gt;nikola new_post -f ipynb&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The filled-in output was:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Creating New Post
+-----------------
+
+Title: Getting Started with Nikola
+Scanning posts........done!
+[2017-02-24T22:09:26Z] NOTICE: compile_ipynb: No kernel specified, assuming "python3".
+[2017-02-24T22:09:28Z] INFO: new_post: Your post's text is at: posts/getting-started-with-nikola.ipynb&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><guid>https://what-is-bioinformatics.com/posts/getting-started-with-nikola/</guid><pubDate>Fri, 24 Feb 2017 22:09:26 GMT</pubDate></item></channel></rss>
