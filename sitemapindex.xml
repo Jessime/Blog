@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://what-is-bioinformatics.com/galleries/rss.xml</loc>
-  <lastmod>2017-02-24T22:15:00Z</lastmod>
+  <lastmod>2017-02-25T19:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://what-is-bioinformatics.com/rss.xml</loc>
@@ -15,6 +15,6 @@
  </sitemap>
  <sitemap>
   <loc>https://what-is-bioinformatics.com/sitemap.xml</loc>
-  <lastmod>2017-02-24T22:15:00Z</lastmod>
+  <lastmod>2017-02-25T19:31:00Z</lastmod>
  </sitemap>
 </sitemapindex>
